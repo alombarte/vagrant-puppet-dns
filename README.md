@@ -3,18 +3,25 @@
 A simple module to run a DNS server inside your virtual machine to resolve fake development domains such as `.vm` and `.local` instead of adding them to your `/etc/hosts`. This is specially needed if your application makes use of dynamic subdomains or you don't want to configure every host.
 
 ## Usage
-Just include the class as a dependency in your puppet module, for example:
+Import the module in your project by cloning this repo into your modules folder, use a submodule or any other approach you desire. An example:
+
+    # From the root directory and seeing the "modules" dir there:
+    git submodule add https://github.com/alombarte/puppet-dns.git modules/dns_server
+    # Using submodules is not usually a good idea :)
+
+Then just include the class as a dependency inside your `manifests/init.pp` or equivalent and set the parameters:
 
     include ::dns_server
 
-You have some parameters in the class, but default values will configure the service in the VM automatically.
-These parameters and its default values are:
+Or call the class with custom parameters instead. These are the default ones, change what you need:
 
     class { '::dns_server':
       in_ns      => 'dns-server.local',
       in_a       => $::ipaddress_eth1,
       forwarders => '8.8.8.8',
     }
+
+*Note*: The DNS server 8.8.8.8 is powered by google.
 
 ## Client configuration
 Once the DNS server is running in the Virtualhost your host machine (the physical machine) needs to use the new DNS server to properly resolve these domains.
