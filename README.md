@@ -29,8 +29,8 @@ This is usually found under `/etc/resolv.conf`. In there:
 - `Control Panel > Network settings` and choose the wired network interface.
 - Select `Protocol TCP/PIv4` and click properties (of course you need admin rights)
 red off your internet connection still works.
-- Manually specify the DNS server address and use as primary DNS your virtual machine IP, e.g: `192.168.33.10`
-- **IMPORTANT** In the secondary DNS write your current primary DNS server so when the virtual machine is powe
+- Manually specify the primary DNS server address and use your virtual machine IP, e.g: `192.168.33.10`
+- In the secondary DNS write your old primary DNS server so when the virtual machine is powered off Internet keeps resolving.
 
 
 ## Dependencies
