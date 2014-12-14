@@ -4,8 +4,8 @@
     "author": "Albert Lombarte",
     "summary": "Installs a DNS server in the local machine so it can be used to resolve subdomains",
     "license": "Apache 2.0",
-    "source": "https://github.com/alombarte/puppet-dns.git",
-    "project_page": "https://github.com/alombarte/puppet-dns",
+    "source": "https://github.com/alombarte/vagrant-puppet-dns.git",
+    "project_page": "https://github.com/alombarte/vagrant-puppet-dns",
     "dependencies": [
         { "name": "puppetlabs/firewall", "version_requirement": ">= 0.0.4" },
     	{ "name": "thias/bind", "version_requirement": "0.5.1" }
