@@ -1,5 +1,5 @@
 {
-    "name": "puppet-dns",
+    "name": "alombarte/vagrant-puppet-dns",
     "version": "0.4",
     "author": "Albert Lombarte",
     "summary": "Installs a DNS server in the local machine so it can be used to resolve subdomains",
