@@ -1,15 +1,15 @@
 # Puppet-dns
 
-A simple module to run a DNS server inside your virtual machine to resolve fake development domains such as `.vm` and `.local` instead of adding them to your `/etc/hosts`. This is specially needed if your application makes use of dynamic subdomains or you don't want to configure every host.
+A simple module to run a DNS server inside your virtual machine to resolve fake development domains such as `.vm` (virtual machine) or `.local` instead of adding them to your `/etc/hosts`. This is specially needed if your application makes use of dynamic subdomains or you don't want to configure every host.
 
 ## Usage
 Import the module in your project by cloning this repo into your modules folder, use a submodule or any other approach you desire. An example:
 
     # From the root directory and seeing the "modules" dir there:
-    git submodule add https://github.com/alombarte/puppet-dns.git modules/dns_server
+    git submodule add https://github.com/alombarte/vagrant-puppet-dns.git modules/dns_server
     # Using submodules is not usually a good idea :)
 
-Then just include the class as a dependency inside your `manifests/init.pp` or equivalent and set the parameters:
+Then just include the class as a dependency inside your Vagrant's `manifests/init.pp` or equivalent and set the parameters:
 
     include ::dns_server
 
